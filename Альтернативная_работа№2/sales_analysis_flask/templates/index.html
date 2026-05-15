@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sales Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h1> Sales Analysis Dashboard</h1>
+
+
+<form method="get">
+    <input type="text" name="city" placeholder="Filter by city">
+    <button type="submit">Filter</button>
+</form>
+
+<hr>
+
+
+<h2>General Stats</h2>
+<p>Total orders: {{ total_orders }}</p>
+<p>Total revenue: {{ total_revenue }}</p>
+<p>Top product: {{ top_product }}</p>
+<p>Top category: {{ top_category }}</p>
+<p>Top city: {{ top_city }}</p>
+
+<hr>
+
+
+<h2>Orders Table</h2>
+{{ table | safe }}
+
+<hr>
+
+
+<h2>Category Sales</h2>
+{{ category_table | safe }}
+
+</body>
+</html>

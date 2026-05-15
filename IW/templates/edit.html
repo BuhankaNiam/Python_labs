@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Edit track</h2>
+
+<form method="POST">
+    <input name="title" value="{{ track.title }}"><br>
+    <input name="artist" value="{{ track.artist }}"><br>
+    <input name="genre" value="{{ track.genre }}"><br>
+    <input name="duration" value="{{ track.duration }}"><br>
+
+    <button type="submit">Save</button>
+</form>
+{% endblock %}

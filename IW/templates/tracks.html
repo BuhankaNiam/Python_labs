@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Список треков</h2>
+
+<!-- УМНЫЙ ПОИСК (ID + название) -->
+<form onsubmit="smartSearch(event)">
+    <input type="text" id="query" placeholder="Search track or ID">
+    <button type="submit">Go</button>
+</form>
+
+<br>
+
+<ul>
+{% for t in tracks %}
+    <li>
+        <a href="/tracks/{{ t.id }}">
+            {{ t.title }} - {{ t.artist }} ({{ t.genre|capitalize }})
+        </a>
+    </li>
+{% endfor %}
+</ul>
+
+<script>
+function smartSearch(event) {
+    event.preventDefault();
+
+    const value = document.getElementById("query").value.trim();
+
+    if (!value) return;
+
+    // если число → открыть по ID
+    if (!isNaN(value)) {
+        window.location.href = "/tracks/" + value;
+    }
+    // если текст → поиск
+    else {
+        window.location.href = "/search?q=" + value;
+    }
+}
+</script>
+
+{% endblock %}

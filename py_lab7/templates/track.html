@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>{{ track.title }}</h2>
+
+<p>Исполнитель: {{ track.artist }}</p>
+<p>Жанр: {{ track.genre.capitalize() }}</p>
+<p>Длительность: {{ track.duration }} сек</p>
+<p>Дата: {{ track.created_at }}</p>
+
+{% endblock %}

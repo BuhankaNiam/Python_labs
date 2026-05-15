@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Список треков</h2>
+
+<ul>
+{% for t in tracks %}
+    <li>
+        <a href="/tracks/{{ t.id }}">
+            {{ t.title }} - {{ t.artist }}
+            {{ t.genre.capitalize() }}
+        </a>
+    </li>
+{% endfor %}
+</ul>
+
+{% endblock %}

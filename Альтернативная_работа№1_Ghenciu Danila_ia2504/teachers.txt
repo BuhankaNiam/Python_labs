@@ -1,0 +1,3 @@
+Gherman_Kiku:matematica,informatica,javascript,java
+Ivan_Ivanov:matematica,fizica
+Ana-Maria_Popescu:

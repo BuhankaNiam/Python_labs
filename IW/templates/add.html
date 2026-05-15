@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Добавить трек</h2>
+
+<form method="POST">
+    <input name="title" placeholder="Название"><br>
+    <input name="artist" placeholder="Исполнитель"><br>
+    <input name="genre" placeholder="Жанр"><br>
+    <input name="duration" placeholder="Длительность (сек)"><br>
+    <button type="submit">Добавить</button>
+</form>
+
+{% endblock %}

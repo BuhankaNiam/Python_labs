@@ -1,0 +1,24 @@
+ 
+Возраст: 483 дней
+День рождения: Wednesday
+
+Общий доход: 1950.0
+
+Доход по категориям:
+category
+Education       100.0
+Electronics    1850.0
+Name: final_total, dtype: float64
+
+Топ товары:
+product
+Book      5
+Phone     2
+Laptop    1
+Name: quantity, dtype: int64
+
+Процент возвратов: 0.0
+
+Время доставки: 2.0 часов
+Диагональ маршрута: 111.80339887498948
+Проверка NaN: True
